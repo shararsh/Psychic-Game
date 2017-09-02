@@ -25,14 +25,12 @@ var checkGuessesLeft = function() {
 listLetterToGuess();
 
 document.onkeyup = function(event) {
-    guessesLeft--;
   var userGuess = String.fromCharCode(event.keyCode).toLowerCase();
-
+  guessesLeft--;
   userGuesses.push(userGuess);
   guessesSoFar();
   checkGuessesLeft();
  
-
         if (guessesLeft > 0){
             if (userGuess == letterToGuess){
                 wins++;
